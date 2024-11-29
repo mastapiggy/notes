@@ -43,3 +43,4 @@ After changing partition size or adding/changing partitions use tool partprobe w
 ```sh
 sudo partprobe -s
 ```
+<span style="color:red">some *red text* text</span>.
