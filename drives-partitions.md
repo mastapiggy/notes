@@ -160,6 +160,34 @@ sudo resize2fs /dev/vg_data/lv_data
 
 edit til here
 
+## Resizing partitions and extending filesystems
+
+
+### Resizing partitions
+
+Let's say we have drive /dev/xvdb with 1 partitions 4GB and 6GB unalocated free space.  
+To check it use tool `parted` with option `print free`
+```sh
+sudo parted /dev/xvdb
+```
+Next in the tool type `resizepart 1 7000m` which extends 1st partition to 7GB  
+
+### Extending ext4 Filesystem
+
+after partition is extended now use this tool `resize2fs`
+```sh
+sudo resize2fs /dev/xvdb
+```
+
+### Extending xfs Filesystem
+
+To extend xfs filesystem use tool `xfs_growfs` on a mountpoint not on a drive like with ext4
+Since it’s XFS filesystem, it can grow without unmounting.
+```sh
+sudo xfs_growfs /mnt/data
+```
+
+
 ## Swap partitions and swap files
 
 ### Swap partition
@@ -200,4 +228,5 @@ sudo swapon /path/to/swapfile
 ```
 To switch off swap use `swapoff` and a device name  
 To check swap just use `swapon` without sudo
+
 
