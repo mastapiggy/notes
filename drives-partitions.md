@@ -155,3 +155,7 @@ sudo lvextend -l +100%FREE /dev/vg_data/lv_data
 sudo resize2fs /dev/vg_data/lv_data
 
 edit til here
+
+## Swap partitions and swap files
+
+Setting up
