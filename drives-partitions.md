@@ -19,7 +19,7 @@ sudo blkid
 Can use `fdisk` for drives with MBR partition Table or `gdisk` with GTP partition table
 
 ### Using `gdisk`
-First create new partition table on a new drive
+1. First create new partition table on a new drive
 ```sh
 sudo gdisk /dev/xvdb
 ```
