@@ -44,6 +44,10 @@ After changing partition size or adding/changing partitions use tool partprobe w
 sudo partprobe -s
 ```
 
+
+--------------------
+
+
 ## Using LVM with xfs filesystem
 
 First install lvm2 and xfsprogs.
@@ -158,4 +162,39 @@ edit til here
 
 ## Swap partitions and swap files
 
-Setting up
+### Swap partition
+
+Setting up swap partition can be done with `fdisk` or `gdisk` code is 82 and 8200
+
+### Swap file
+
+First create a file that will be used as swap space:
+```sh
+sudo dd if=/dev/zero of=swapfile bs=1M count=1024
+```
+Change permission on a file to `0600` with `chmod 0600 /path/to/swapfile`
+
+### Make swap partition and swap file usable
+
+#### Using swap partition:
+
+```sh
+sudo mkswap /dev/sdb1
+```
+and now to use swap partition:
+
+```sh
+sudo swapon /dev/sdb1
+```
+#### Using swap files
+
+procedure is the same but instead a device now use a file:
+
+```sh
+sudo mkswap /path/to/swapfile
+```
+and now to use swap partition:
+
+```sh
+sudo swapon /path/to/swapfile
+```
