@@ -198,3 +198,6 @@ and now to use swap partition:
 ```sh
 sudo swapon /path/to/swapfile
 ```
+To switch off swap use `swapoff` and a device name  
+To check swap just use `swapon` without sudo
+
