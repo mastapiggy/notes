@@ -4,7 +4,7 @@
 
 - find
 - df
-
+- xargs
 
 ------
 
@@ -38,3 +38,22 @@ Find files and execute `file` command on every file found:
 ```sh
 find . -type f -exec file '{}' \;
 ```
+
+## Xargs command
+
+Build and execute command lines from standard input
+
+A file `hostnames.txt` contains on each line domain name:  
+```
+example.com
+example.net
+example.org
+google.com
+google.pl
+```
+We want to check every single line of this file with `host` command with arguments `-t A` for a type of A record over the google dns server:
+Option `-I` specifies a placeholder `{}`to control where to put a line of input in a command  
+```sh
+cat hostnames.txt | xargs -I{} host -t A {} 8.8.8.8
+```
+
