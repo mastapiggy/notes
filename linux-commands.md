@@ -56,4 +56,35 @@ Option `-I` specifies a placeholder `{}`to control where to put a line of input 
 ```sh
 cat hostnames.txt | xargs -I{} host -t A {} 8.8.8.8
 ```
+To speed up and run 4 `host` commands at once use `-P`, example:  
+```sh
+cat hostnames.txt | xargs -I{} -P4 host -t A {} 8.8.8.8
+```  
+If we want to have only last line of output from `host` command we need to tell xargs to run shell for every line from the file as an input and that needs to be piped to `tail` command
+```sh
+cat hostnames.txt | xargs -I{} -P4 sh -c "host -t A {} 8.8.8.8 | tail -n1"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
