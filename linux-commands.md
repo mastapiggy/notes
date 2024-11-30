@@ -30,3 +30,11 @@ Find files ending on `.txt` and remove them
 ```sh
 find . -type f -name '*.txt' -exec rm '{}' \;
 ```
+or use `xargs` instead of `exec`
+```sh
+find . -type f -name '*.txt' -print0 | xargs -0 /bin/rm -f
+```
+Find files and execute `file` command on every file found:
+```sh
+find . -type f -exec file '{}' \;
+```
