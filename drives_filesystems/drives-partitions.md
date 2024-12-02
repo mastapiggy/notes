@@ -232,7 +232,9 @@ Check the Filesystem Size:
 
 ```sh
 df -h /mnt/data
-You should now see that the size of /mnt/data has increased accordingly.
+```
+
+You should now see that the size of `/mnt/data` has increased accordingly.
 
 Summary of Commands for ext4 Filesystem:
 
