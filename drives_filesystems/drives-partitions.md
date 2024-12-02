@@ -1,5 +1,13 @@
 # Drives, partitions and filesystem
 
+## List of content
+
+- Working with block devices
+- using fdisk, gdisk
+- LVM creation, extending and managing
+- xfs and ext4 filesystem
+- swap partitions and swap files
+
 ## Listing block devices on a system
 
 To see drives and partitions and mountpoints:
