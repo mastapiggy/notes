@@ -125,12 +125,29 @@ When a file or files are modified on a local repo there is no need to 'add' them
 git commit -am "title_of_a_commit" -m "more detailed_description"
 
 
+When there is updated main branch (staying on a working branch) merge it to the working branch with
 
+```sh
+git merge main
+```
 
+To see all commits use
 
+```sh
+git log
+```
 
+To reset commits with all changes use
 
+```sh
+git reset --hard <hash_of_the_commit>
+```
 
+To revert changes to the 1 before
+
+```sh
+git reset HEAD~1
+```
 
 
 
