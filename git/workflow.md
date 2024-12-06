@@ -5,7 +5,7 @@
 3. Edit files locally
 4. Review and commit changes
 5. Push new branch to GitHub
-
+6. Review on GitHub and create a Pull Request *PR*
 -----
 
 ## Cloning Repository from GitHub
@@ -72,7 +72,36 @@ git push -u origin my-new-branch
 or use without setting up defaults
 
 ```sh
-git push ....... edit and finish it
+git push origin my-new-branch
 ```
 
+## Review on GitHub and create a Pull Request *PR*
 
+On Github repo page in the UI change the branch and verify changes.  
+After changes are ok create a Pull Request *PR*.  
+Make sure that base branch is `main` and compare branch is `my-new-branch`, add title and descriptionand click `Create pull request`.
+Now changes what were done in `my-new-branch` are merged to the `main` branch. Next step is to delete `my-new-branch` and update `main` one locally.  
+
+After everything is checked and merged just delete unused branch on GitHub and on local system.  
+
+## Update local main branch
+
+Change to the `main` branch
+
+```sh
+git checkout main
+```
+
+Now update `main` branch by pulling it from GitHub repo because changes are merged and `main` branch is actual
+
+```sh
+git pull origin main
+```
+
+Now local main branch is up to date with branch on GitHub
+
+Optionally remove a branch on local computer
+
+```sh
+git branch -d my-new-branch
+```
