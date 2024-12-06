@@ -4,6 +4,7 @@
 2. Create new branch and start working on it
 3. Edit files locally
 4. Review and commit changes
+5. Push new branch to GitHub
 
 -----
 
@@ -39,14 +40,39 @@ This command creates a new branch and immediately checks it out.
 git checkout -b my-new-branch
 ```
 
+## Edit Files
 
+Just to be sure before editing check on which branch are you working with `git branch`.  
+If on a correct one just open, edit and save files. 
 
+## Review and commit changes
 
+First check what was changed with `git status`  
+Next step is to stage the changes. Use `git add .` to stage all files and directories.
 
+```sh
+git add file1.md file2.md
+```
 
+To commit changes use first `-m "text"` as title and second as a more detailed description
 
+```sh
+git commit -m "Updated files" -m "What files got updated and why"
+```
 
+## Push new branch to GitHub
 
+Push the new branch
+The -u option sets origin my-new-branch as the default tracking branch, so next time just use `git push` without arguments.  
 
+```sh
+git push -u origin my-new-branch
+```
+
+or use without setting up defaults
+
+```sh
+git push ....... edit and finish it
+```
 
 
