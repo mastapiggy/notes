@@ -29,4 +29,44 @@ git remote add origin git@github.com:m4testingaccount/your-repository.git
 git remote -v
 git push origin main
 
+8. Pulling and Pushing Changes
+Pull latest changes:
+
+git pull origin main
+
+Push local commits:
+git push origin main
+
+-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
