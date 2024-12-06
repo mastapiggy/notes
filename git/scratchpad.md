@@ -17,7 +17,7 @@ If you see an upstream remote that you no longer need, remove it with:
 -----------------
 
 # Starting from creating a repo locally and uploading to GitHub
-
+If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory.  
 mkdir your-repository  
 cd your-repository/  
 echo "# your-repository" >> README.md  
