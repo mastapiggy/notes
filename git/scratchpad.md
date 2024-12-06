@@ -18,23 +18,23 @@ If you see an upstream remote that you no longer need, remove it with:
 
 # Starting from creating a repo locally and uploading to GitHub
 
-mkdir your-repository
-cd your-repository/
-echo "# your-repository" >> README.md
-git init
-git add README.md
-git status
-git commit -m "first commit" -m "Just a description"
-git remote add origin git@github.com:m4testingaccount/your-repository.git
-git remote -v
-git push origin main
+mkdir your-repository  
+cd your-repository/  
+echo "# your-repository" >> README.md  
+git init  
+git add README.md  
+git status  
+git commit -m "first commit" -m "Just a description"  
+git remote add origin git@github.com:m4testingaccount/your-repository.git  
+git remote -v  
+git push origin main  
 
-8. Pulling and Pushing Changes
-Pull latest changes:
+8. Pulling and Pushing Changes  
+Pull latest changes:  
 
-git pull origin main
+git pull origin main  
 
-Push local commits:
+Push local commits:  
 git push origin main
 
 -----
