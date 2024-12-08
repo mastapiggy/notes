@@ -118,7 +118,11 @@ git push origin main
 
 -----
 
+Set up a remote to the original repository (upstream), so you can fetch any updates when owner makes changes:
 
+bash
+Copy code
+git remote add upstream https://github.com/mastapiggy/demo-repo.git
 
 
 
