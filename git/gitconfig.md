@@ -28,3 +28,14 @@ ssh-add ~/.ssh/id_ed25519
 ```sh
 ssh -T git@github.com
 ```
+
+## Configure Git portable in portable Vscode.
+
+If it happens that you need to use only portable versions:
+
+1. Download and unpack Git Portable form official website
+2. in VScode go to File -> preferences -> settings type settings. and click edit in settings.json
+3. Add this to the end of the file  
+```
+   "git.path": "C:\\Users\\username\\path\\to\\PortableGit\\bin\\git.exe"
+   ```
