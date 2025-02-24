@@ -39,3 +39,4 @@ If it happens that you need to use only portable versions:
 ```
    "git.path": "C:\\Users\\username\\path\\to\\PortableGit\\bin\\git.exe"
    ```
+4. Add path to portable git to Windows path and now can use git directly from powershell or cmd.
