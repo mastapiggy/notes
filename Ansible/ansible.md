@@ -14,11 +14,19 @@ https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.
 
 ### Configuration  
 
-For config file and configuration file order:
-
+Configuration file reference:
 ```
 https://docs.ansible.com/ansible/latest/reference_appendices/config.html
 ```
+
+Configuration file will be searched for in the following order:  
+```
+ANSIBLE_CONFIG (environment variable if set)
+ansible.cfg (in the current directory)
+~/.ansible.cfg (in the home directory)
+/etc/ansible/ansible.cfg
+```  
+
 
 Most basic config file example in ansible directory `ansible.cfg`:
 
@@ -29,10 +37,15 @@ private_key_file = /home/ubuntu/.ssh/ansible_ed25519
 ```
 ------
 
-## Ansible command
+## Ansible command  
 
+Running a ping with specific inventory and key file:
 ```sh
-ansible 
+ansible all --key-file ~/.ssh/ansible -i inventory -m ping
+```  
+running from ansible directory will take local config file so command can be shorten to:
+```sh
+ansible all -m ping 
 ```
 
 ### Examples
