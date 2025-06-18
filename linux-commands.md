@@ -3,6 +3,7 @@
 ## List of commands in this file:
 
 - find
+- sed
 - df
 - xargs
 
@@ -43,6 +44,20 @@ Find only files in a directory and move them to Dir1: "\"  at the end of exec co
 find . -type f -exec mv {} Dir1/ \;
 ```
 
+## Sed
+
+To subsidize one character to another use:  
+s - subsidize, g - at the end means global. Otherwise it will only work for 1st instance of the pattern.
+
+```sh
+sed 's/old/new/g' file.txt
+```
+
+To remove a pattern:  
+d - is for delete
+```sh
+sed '/---/d' file.txt
+```
 
 ## Xargs command
 
