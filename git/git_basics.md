@@ -1,5 +1,20 @@
 # Git manual/information  
 
+## Git configuration  
+
+To list help how to use git config use: `git config` 
+
+Config file is stored in a local repo directory: `~/project_name/.git/config`  
+
+To list all configurations of git: `git config --list`  
+
+To add local congig use from below. It is section.keyname format:  
+`git config --add --local section_name.name Piggy`
+`git config --add --local section_name.position Tazzy`
+`git config --add --local section_name.value over9000`
+
+To unset a value: `git config --unset section_name.value`
+
 ## Starting a local repo and commiting changes  
 
 `git init` to initialize a local repo  
