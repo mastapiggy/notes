@@ -38,6 +38,11 @@ Find files and execute `file` command on every file found:
 ```sh
 find . -type f -exec file '{}' \;
 ```
+Find only files in a directory and move them to Dir1: "\"  at the end of exec command is to escape ";" which is needed to close exec command.
+```sh
+find . -type f -exec mv {} Dir1/ \;
+```
+
 
 ## Xargs command
 
