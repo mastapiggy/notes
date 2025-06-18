@@ -2,6 +2,12 @@
 
 ## Git configuration  
 
+To change the initial branch name to use in all new repos - global config change:  
+
+```
+git config --global init.defaultBranch <name>
+```
+
 To list help how to use git config use: `git config` 
 
 Config file is stored in a local repo directory: `~/project_name/.git/config`  
@@ -61,6 +67,24 @@ $ git cat-file -p ef7e93
 # contents
 ```
 
+## Branching
+
+Change a branch name from master to main use:  
+
+```
+git branch -m oldname newname
+```
+
+Create a new branch and switch to it:
+
+```
+git switch -c new_branch_name
+```
+
+To just move from one branch to another use `git switch branch_name`. Old way is to use `git checkout`  
+
+Check on which branch are we: `git branch`  
 
 
-Minute 31:00
+
+Minute 1.01.00
