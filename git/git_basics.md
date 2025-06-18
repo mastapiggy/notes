@@ -69,6 +69,9 @@ $ git cat-file -p ef7e93
 
 ## Branching
 
+All branches heads are stored in local repo in directory: `.git/refs/heads/`.
+Use `git cat-file -p <hashvalue>` to see the commit
+
 Change a branch name from master to main use:  
 
 ```
@@ -85,6 +88,12 @@ To just move from one branch to another use `git switch branch_name`. Old way is
 
 Check on which branch are we: `git branch`  
 
+## Logs  
 
+To check logs use `git log` can be used with a parameter `--decorate=no, full or short`
+
+Short and more compact log: `git log --oneline`  
+
+More visual output `git log --graph --oneline`
 
 Minute 1.01.00
