@@ -8,6 +8,12 @@ To change the initial branch name to use in all new repos - global config change
 git config --global init.defaultBranch <name>
 ```
 
+Change the default Git editor to vim
+
+```
+git config --global core.editor "vim"
+```
+
 To list help how to use git config use: `git config` 
 
 Config file is stored in a local repo directory: `~/project_name/.git/config`  
@@ -94,6 +100,11 @@ To check logs use `git log` can be used with a parameter `--decorate=no, full or
 
 Short and more compact log: `git log --oneline`  
 
-More visual output `git log --graph --oneline`
+More visual output showing all branches`git log --graph --oneline --all`
 
-Minute 1.01.00
+## Merge
+
+To merge other branch to our main one first check the current branch: `git branch`  
+git merge other_branch
+
+Minute 1.09.00
