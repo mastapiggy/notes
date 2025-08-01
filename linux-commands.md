@@ -44,6 +44,26 @@ Find only files in a directory and move them to Dir1: "\"  at the end of exec co
 find . -type f -exec mv {} Dir1/ \;
 ```
 
+
+## SUDO config - 
+
+LPIC 1 102 page **523!**
+
+The /etc/sudoers File
+sudo's main configuration file is /etc/sudoers(there is also the /etc/sudoers.d directory). That is
+the place where users' sudo privileges are determined. In other words, here you will specify who can
+run what commands as what users on what machines — as well as other settings. The syntax used is
+as follows:
+carol@debian:~$ sudo less /etc/sudoers
+(...)
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+(...)
+
+Finish correction
+
 ## Sed
 
 To subsidize one character to another use:  
