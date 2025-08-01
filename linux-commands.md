@@ -9,6 +9,13 @@
 
 ------
 
+## Open Ports  
+
+When it comes to keeping an eye on open ports, four powerful utilities are present on most Linux
+systems: lsof, fuser, netstat and nmap. We will cover them in this section.  
+
+**Refine and add examples**
+
 ## Find command
 
 Usage of the command: `find . -name '*.jpg*'` which means `find` from here`.` files or directories with . jpg in the name `'*.jpg*'` - remember to use single quore when using file globbing
